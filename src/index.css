@@ -12,7 +12,7 @@
   --color-card: hsl(var(--card));
 }
 
-@layer {
+@layer base {
   :root {
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
@@ -20,6 +20,9 @@
     --primary: 250 47% 60%;
     --primary-foreground:210 40% 98%;
     --border: 214% 32% 91%;
+
+    /* ✅ Light mode background image */
+    --bg-image: url('./assets/coolbackgrounds-particles-oxygen.png');
   }
 
   .dark {
@@ -29,6 +32,9 @@
     --primary: 250 65% 65%;
     --primary-foreground:213 31% 91%;
     --border: 217% 33% 20%;
+
+    /* ✅ Dark mode background image */
+    --bg-image: url('./assets/coolbackgrounds-particles-stellar.png');
   }
 
   * {
@@ -42,6 +48,11 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "call" 1;
+    
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -64,7 +75,7 @@
 }
 
 @utility card-hover {
-  @apply transition-transfor duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
 @utility gradient-border {
@@ -76,7 +87,7 @@
 
 @utility cosmic-button {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
-        transition-all duration-300 hover-shadow-[0_0_10px_rgba(139, 92, 246, 0.5)]
+        transition-all duration-300 hover:shadow-[0_0_10px_rgba(139_92_246_/_0.5)]
         hover:scale-105 active:scale-95;
 }
 
