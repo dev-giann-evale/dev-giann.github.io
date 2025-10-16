@@ -11,7 +11,7 @@ export const HeroSection = () => {
                         <span> Evale</span>
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto">
-                        Full Stack Developer with 7+ years of experience in creating stellar projects across multiple platforms. With a strong track record of building and deploying scalable applications. Currently focused on integrating AI technologies into projects to drive innovation and enhance user experiences.
+                        Full Stack Developer with 7+ years of experience in creating stellar projects across multiple platforms. Pursuing excellence in building and deploying scalable applications. Currently focused on integrating AI technologies into projects to drive innovation and enhance user experiences.
                     </p>
                     <div className="pt-4">
                         <a href="#projects" className="cosmic-button">
