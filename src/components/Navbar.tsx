@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 
 const navItems = [
     {name: "Home", href:"#home"},
-    {name: "About", href:"#about"},
+    {name: "What I do", href:"#about"},
     {name: "Skills", href:"#skills"},
     {name: "Project", href:"#project"},
     {name: "Contact", href:"#contact"}
@@ -11,16 +11,17 @@ const navItems = [
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScrolled = () => {
-            setIsScrolled(window.screenY > 10);
+            setIsScrolled(window.scrollY  > 10);
         };
 
         window.addEventListener("scroll", handleScrolled);
         return () => window.removeEventListener("scroll", handleScrolled);
     });
+
     return (
         <nav className={cn("fixed w-full z-40 transition-all duration-300",
             isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
