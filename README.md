@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# 💼 DevGiann — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **developer portfolio** built with **React**, **TypeScript**, and **Tailwind CSS**.  
+Designed to showcase your **skills, experience, and projects** with smooth animations and a clean UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- ⚛️ **React + TypeScript** — fully typed components for scalability  
+- 🎨 **Tailwind CSS** — fast, utility-first styling  
+- 🌙 **Dark Mode** (optional, easily configurable)  
+- 🧩 **Modular Components** — reusable and maintainable  
+- 🧠 **Framer Motion Animations** for interactive UX  
+- 📱 **Fully Responsive** — optimized for desktop and mobile  
+- 📬 **Contact Form Integration** (Mailgun / EmailJS / API-ready)  
+- ⚡ **Fast Build** with Vite  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Category | Technology |
+|-----------|-------------|
+| Framework | [React 18+](https://react.dev/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| Animations | [Framer Motion](https://www.framer.com/motion/) |
+| Icons | [Lucide React](https://lucide.dev/) or [Heroicons](https://heroicons.com/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| Deployment | [Vercel](https://vercel.com/) / [Netlify](https://www.netlify.com/) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Folder Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+portfolio/
+├── src/
+│ ├── assets/ # Images, logos, icons
+│ ├── components/ # Reusable UI components
+│ ├── sections/ # Main page sections (Hero, About, Projects, Contact)
+│ ├── hooks/ # Custom React hooks
+│ ├── types/ # TypeScript types and interfaces
+│ ├── data/ # Personal info, project data, etc.
+│ ├── styles/ # Global styles or extra CSS
+│ ├── App.tsx # Main component
+│ ├── main.tsx # Vite entry point
+│ └── index.css # Tailwind CSS directives
+├── public/
+│ ├── favicon.ico
+│ └── robots.txt
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/devgiann-portfolio.git
+cd devgiann-portfolio
+
+Install Dependencies
+npm install
+
+
+or
+
+yarn install
+
+3️⃣ Run the Development Server
+npm run dev
+
+
+Access locally at: 👉 http://localhost:5173
+
+4️⃣ Build for Production
+npm run build
+
+☁️ Deployment
+
+You can deploy quickly using any of these platforms:
+
+Vercel
+npm run build
+vercel deploy
+
+Netlify
+npm run build
+netlify deploy
+
+GitHub Pages
+npm run build
+npm run deploy
+
+👨‍💻 Author
+
+Giann E.
+💼 Software Developer | 🧠 DevOps & AI Integration
+🌐 devgiann.vercel.app
+
+📧 contact.giann.evale@gmail.com
+
+🪪 License
+
+This project is licensed under the MIT License — feel free to fork, modify, and use it for your own portfolio.
+
+⭐ If you found this useful, please star the repo to show support!

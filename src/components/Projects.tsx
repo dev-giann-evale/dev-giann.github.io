@@ -1,12 +1,12 @@
 const projects = [
     {
         id: 1, 
-        title:"Project1", 
-        description: "description1",
-        image:"/projects/project1.webp",
-        tags:["React", "TailwindCSS"],
-        demoUrl:"#demo-url",
-        githubUrl:"#github-url"
+        title:"GiannDev Portfolio", 
+        description: "React with TailwindCSS portfolio web app.",
+        image:"/projects/Project1.png",
+        tags:["React", "TailwindCSS", "Typescript"],
+        demoUrl:"#",
+        githubUrl:"https://github.com/dev-giann-evale/dev-giann.github.io"
     },
     {
         id: 2, 
@@ -49,7 +49,7 @@ export const Projects = () => {
                             </div>
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((key, tag) => (
+                                    {project.tags.map((tag, key) => (
                                         <span key={key} className="px-2 py-1 text-xs border font-medium rounded-full bg-secondary text-secondary-foreground">
                                             {tag}
                                         </span>
