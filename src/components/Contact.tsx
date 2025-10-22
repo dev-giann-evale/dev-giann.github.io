@@ -142,7 +142,7 @@ export const Contact = () => {
                                 className={cn("cosmic-button w-full flex items-center justify-center gap-2",
 
                                 )}>
-                                {isSubmitting ? "Send Message" : "Submitting"}
+                                {isSubmitting ? "Submitting": "Send Message"}
                                 <i className="bi bi-send"></i>
                             </button>
                         </form>
